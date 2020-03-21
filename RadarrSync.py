@@ -116,7 +116,7 @@ for server in Config.sections():
                            }
 
                 r = session.post('{0}/api/movie?apikey={1}'.format(SyncServer_url, SyncServer_key), data=json.dumps(payload))
-                if r.status_code == 200:
+                if r.status_code in (200, 201):
                      searchid.append(int(r.json()['id']))
                      logger.info('adding {0} to {1} server'.format(movie['title'], server))
                 else:
