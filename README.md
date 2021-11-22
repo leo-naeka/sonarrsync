@@ -1,12 +1,3 @@
-[cookbookurl]: https://geek-cookbook.funkypenguin.co.nz
-[kitchenurl]: https://discourse.kitchen.funkypenguin.co.nz
-[discordurl]: http://chat.funkypenguin.co.nz
-[patreonurl]: https://patreon.com/funkypenguin
-[blogurl]: https://www.funkypenguin.co.nz
-[hub]: https://hub.docker.com/r/funkypenguin/alertmanager-discord/
-
-[![geek-cookbook](https://raw.githubusercontent.com/funkypenguin/www.funkypenguin.co.nz/master/images/geek-kitchen-banner.png)][cookbookurl]
-
 # Contents
 
 1. [What is leo-naeka/sonarrsync?](#what-is-leo-naeka-sonarrsync)
@@ -57,7 +48,7 @@ Sonarr does not support saving files to different folder roots for different qua
     url = https://example.com:443
     key = FCKGW-RHQQ2-YXRKT-8TG6W-2B7Q8
     
-    [Sonarr]
+    [Sonarr4k]
     url = http://127.0.0.1:8080
     key = FCKGW-RHQQ2-YXRKT-8TG6W-2B7Q8
     ```
