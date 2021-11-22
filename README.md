@@ -31,7 +31,7 @@ two separate files of different quality (say, a 1080P WebDL and a 4K UHD).
 # Upstream README follows..
 
 ## SonarrSync
-Syncs two Radarr servers through web API.  
+Syncs two Sonarr servers through web API.  
 
 ### Why
 Many Plex servers choke if you try to transcode 4K files. To address this a common approach is to keep a 4k and a 1080/720 version in seperate libraries.
