@@ -6,12 +6,12 @@ ARG VCS_REF
 
 # Good docker practice, plus we get microbadger badges
 LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-url="https://github.com/funkypenguin/RadarrSync.git" \
+      org.label-schema.vcs-url="https://github.com/leo-naeka/sonarrsync.git" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.schema-version="2.2-r1"
 
 # Copy the script and requirements. Note that we don't copy Config.txt - this needs to be bind-mounted
-COPY RadarrSync.py / 
+COPY SonarrSync.py / 
 COPY requirements.txt / 
 COPY entrypoint.sh / 
 
