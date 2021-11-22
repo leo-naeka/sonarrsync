@@ -81,14 +81,14 @@ for server in Config.sections():
     # TODO #11 add reconcilliation to remove series that have been deleted from source server
     seriesIds_to_syncserver = []
     for series_to_sync in SyncServerSeries.json():
-        seriesIds_to_syncserver.append(series_to_sync['tmdbId'])
+        seriesIds_to_syncserver.append(series_to_sync['tvdbId'])
         #logger.debug('found series to be added')
 
     newSeries = 0
     searchid = []
     for series in sonarrSeries.json():
         if series['profileId'] == int(ConfigSectionMap(server)['profile']):
-            if series['tmdbId'] not in seriesIds_to_syncserver:
+            if series['tvdbId'] not in seriesIds_to_syncserver:
                 logging.debug('title: {0}'.format(series['title']))
                 logging.debug('qualityProfileId: {0}'.format(series['qualityProfileId']))
                 logging.debug('titleSlug: {0}'.format(series['titleSlug']))
@@ -96,7 +96,7 @@ for server in Config.sections():
                 for image in images:
                     image['url'] = '{0}{1}'.format(sonarr_url, image['url'])
                     logging.debug(image['url'])
-                logging.debug('tmdbId: {0}'.format(series['tmdbId']))
+                logging.debug('tvdbId: {0}'.format(series['tvdbId']))
                 logging.debug('path: {0}'.format(series['path']))
                 logging.debug('monitored: {0}'.format(series['monitored']))
 
@@ -107,7 +107,7 @@ for server in Config.sections():
                 payload = {'title': series['title'],
                            'qualityProfileId': series['qualityProfileId'],
                            'titleSlug': series['titleSlug'],
-                           'tmdbId': series['tmdbId'],
+                           'tvdbId': series['tvdbId'],
                            'path': path,
                            'monitored': series['monitored'],
                            'images': images,
